@@ -11,6 +11,7 @@ public class MainStudent {
         nameToGrade.put("Mihai", 9);
         nameToGrade.put("George", 5);
         nameToGrade.put("Ionela", 7);
+        nameToGrade.put("Ionela", 9);
         System.out.println(nameToGrade);
 
         Set<Map.Entry<String, Integer>> entries = nameToGrade.entrySet();
@@ -18,12 +19,12 @@ public class MainStudent {
             System.out.println(entry.getKey() + " " + entry.getValue());
 
         }
-        for(Map.Entry<String,Integer> price:nameToGrade.entrySet()) {
-            if (maxGrade == null || price.getValue().compareTo(maxGrade.getValue()) > 0) {
-                maxGrade = price;
+        for(Map.Entry<String,Integer> grade:nameToGrade.entrySet()) {
+            if (maxGrade == null || grade.getKey().compareTo(maxGrade.getKey()) > 0) {
+                maxGrade = grade;
             }
         }
-        System.out.println("Highest grade is: "+maxGrade.getValue());
+        System.out.println("Highest grade is: "+maxGrade.getKey());
 
     }
 }
